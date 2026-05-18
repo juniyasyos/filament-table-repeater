@@ -15,7 +15,7 @@
 
 ## Upgrade Guide for 2.x to 3.x
 
-1. Rename you use statements from `Awcodes\FilamentTableRepeater` to `Awcodes\TableRepeater`.
+1. Rename you use statements from `Juniyasyos\FilamentTableRepeater` to `Juniyasyos\TableRepeater`.
 2. Run `npm run build` to update your theme file.
 3. See [Headers](#headers) for changes to the `headers()` method.
 
@@ -53,8 +53,8 @@ content: [
 This field has most of the same functionality of the [Filament Forms Repeater](https://filamentphp.com/docs/3.x/forms/fields/repeater) field. The main exception is that this field can not be collapsed.
 
 ```php
-use Awcodes\TableRepeater\Components\TableRepeater;
-use Awcodes\TableRepeater\Header;
+use Juniyasyos\TableRepeater\Components\TableRepeater;
+use Juniyasyos\TableRepeater\Header;
 
 TableRepeater::make('users')
      ->headers([
@@ -71,7 +71,7 @@ TableRepeater::make('users')
 To add headers use the `headers()` method. and pass in an array of `Header` components.
 
 ```php
-use Awcodes\TableRepeater\Header;
+use Juniyasyos\TableRepeater\Header;
 
 TableRepeater::make('users')
     ->headers([

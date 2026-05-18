@@ -1,0 +1,33 @@
+<?php
+
+namespace {{ namespace }};
+
+use Livewire\Livewire;
+use Tests\TestCase;
+
+class {{ class }}Test extends TestCase
+{
+    public function test_can_render_table_repeater()
+    {
+        $component = app(\{{ namespace }}\{{ class }}::class);
+
+        $this->assertNotNull($component);
+        $this->assertCount(2, $component->getHeaders());
+    }
+
+    public function test_table_repeater_has_correct_schema()
+    {
+        $component = app(\{{ namespace }}\{{ class }}::class);
+        $schema = $component->getChildComponents();
+
+        $this->assertNotEmpty($schema);
+    }
+
+    public function test_table_repeater_has_default_settings()
+    {
+        $component = app(\{{ namespace }}\{{ class }}::class);
+
+        $this->assertTrue($component->isAddable());
+        $this->assertTrue($component->isDeletable());
+    }
+}

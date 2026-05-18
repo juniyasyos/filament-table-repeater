@@ -1,20 +1,26 @@
 {
-    "name": "awcodes/filament-table-repeater",
+    "name": "juniyasyos/table-repeater",
     "description": "A modified version of the Filament Forms Repeater to display it as a table.",
     "keywords": [
         "awcodes",
+        "juniyasyos",
         "laravel",
         "filament",
         "table repeater",
         "plugin"
     ],
-    "homepage": "https://github.com/awcodes/filament-table-repeater",
+    "homepage": "https://github.com/juniyasyos/filament-table-repeater",
     "license": "MIT",
     "authors": [
         {
             "name": "Adam Weston",
             "email": "awcodes1@gmail.com",
             "role": "Developer"
+        },
+        {
+            "name": "Ahmad Ilyas",
+            "email": "ahmadilyasdahlan@gmail.com",
+            "role": "Software Engineer"
         }
     ],
     "require": {
@@ -35,13 +41,16 @@
     },
     "autoload": {
         "psr-4": {
-            "Awcodes\\TableRepeater\\": "src"
-        }
+            "Juniyasyos\\TableRepeater\\": "src"
+        },
+        "files": [
+            "src/Support/helpers.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
-            "Awcodes\\TableRepeater\\Tests\\": "tests/src",
-            "Awcodes\\TableRepeater\\Tests\\Database\\Factories\\": "tests/database/factories"
+            "Juniyasyos\\TableRepeater\\Tests\\": "tests/src",
+            "Juniyasyos\\TableRepeater\\Tests\\Database\\Factories\\": "tests/database/factories"
         }
     },
     "scripts": {
@@ -59,7 +68,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Awcodes\\TableRepeater\\TableRepeaterServiceProvider"
+                "Juniyasyos\\TableRepeater\\TableRepeaterServiceProvider"
             ]
         }
     },

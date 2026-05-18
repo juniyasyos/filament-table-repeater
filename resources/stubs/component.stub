@@ -1,0 +1,33 @@
+<?php
+
+namespace {{ namespace }};
+
+use Juniyasyos\TableRepeater\Components\TableRepeater;
+use Juniyasyos\TableRepeater\Header;
+use Filament\Forms\Components\TextInput;
+
+class {{ class }} extends TableRepeater
+{
+    public static function make($name = null): static
+    {
+        return parent::make($name ?? 'items')
+            ->headers([
+                Header::make('name')
+                    ->label('Name')
+                    ->width('150px'),
+                Header::make('description')
+                    ->label('Description'),
+            ])
+            ->schema([
+                TextInput::make('name')
+                    ->required()
+                    ->placeholder('Enter name'),
+                TextInput::make('description')
+                    ->placeholder('Enter description'),
+            ])
+            ->columnSpan('full')
+            ->defaultItems(0)
+            ->itemsAddable(true)
+            ->itemsDeletable(true);
+    }
+}

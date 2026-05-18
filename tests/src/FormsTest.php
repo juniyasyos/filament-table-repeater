@@ -1,7 +1,7 @@
 <?php
 
-use Awcodes\TableRepeater\Components\TableRepeater;
-use Awcodes\TableRepeater\Tests\Fixtures\Livewire as LivewireForm;
+use Juniyasyos\TableRepeater\Components\TableRepeater;
+use Juniyasyos\TableRepeater\Tests\Fixtures\Livewire as LivewireForm;
 use function Pest\Livewire\livewire;
 
 it('renders editor field', function () {

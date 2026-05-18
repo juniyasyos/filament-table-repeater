@@ -1,8 +1,8 @@
 <?php
 
-namespace Awcodes\TableRepeater\Tests;
+namespace Juniyasyos\TableRepeater\Tests;
 
-use Awcodes\TableRepeater\TableRepeaterServiceProvider;
+use Juniyasyos\TableRepeater\TableRepeaterServiceProvider;
 use BladeUI\Heroicons\BladeHeroiconsServiceProvider;
 use BladeUI\Icons\BladeIconsServiceProvider;
 use Filament\Actions\ActionsServiceProvider;

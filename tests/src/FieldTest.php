@@ -1,8 +1,8 @@
 <?php
 
-use Awcodes\TableRepeater\Components\TableRepeater;
-use Awcodes\TableRepeater\Header;
-use Awcodes\TableRepeater\Tests\Fixtures\Livewire;
+use Juniyasyos\TableRepeater\Components\TableRepeater;
+use Juniyasyos\TableRepeater\Header;
+use Juniyasyos\TableRepeater\Tests\Fixtures\Livewire;
 use Filament\Forms\ComponentContainer;
 use Filament\Forms\Components\TextInput;
 use Filament\Support\Enums\Alignment;

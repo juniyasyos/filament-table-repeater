@@ -18,6 +18,12 @@ class Header
         public string | Closure | Alignment | null $align = null,
         public string | Closure | null $width = null,
         public bool | Closure | null $isRequired = null,
+        public bool | Closure | null $sortable = null,
+        public bool | Closure | null $filterable = null,
+        public string | Closure | null $icon = null,
+        public string | Closure | null $tooltip = null,
+        public string | Closure | null $helpText = null,
+        public bool | Closure | null $exportable = null,
     ){}
 
     public static function make(string $name): static
@@ -75,5 +81,80 @@ class Header
     {
         return $this->evaluate($this->isRequired)
             ?? false;
+    }
+
+    public function sortable(bool | Closure $condition = true): static
+    {
+        $this->sortable = $condition;
+
+        return $this;
+    }
+
+    public function isSortable(): bool
+    {
+        return $this->evaluate($this->sortable)
+            ?? false;
+    }
+
+    public function filterable(bool | Closure $condition = true): static
+    {
+        $this->filterable = $condition;
+
+        return $this;
+    }
+
+    public function isFilterable(): bool
+    {
+        return $this->evaluate($this->filterable)
+            ?? false;
+    }
+
+    public function icon(string | Closure $icon): static
+    {
+        $this->icon = $icon;
+
+        return $this;
+    }
+
+    public function getIcon(): string | null
+    {
+        return $this->evaluate($this->icon);
+    }
+
+    public function tooltip(string | Closure $tooltip): static
+    {
+        $this->tooltip = $tooltip;
+
+        return $this;
+    }
+
+    public function getTooltip(): string | null
+    {
+        return $this->evaluate($this->tooltip);
+    }
+
+    public function helpText(string | Closure $text): static
+    {
+        $this->helpText = $text;
+
+        return $this;
+    }
+
+    public function getHelpText(): string | null
+    {
+        return $this->evaluate($this->helpText);
+    }
+
+    public function exportable(bool | Closure $condition = true): static
+    {
+        $this->exportable = $condition;
+
+        return $this;
+    }
+
+    public function isExportable(): bool
+    {
+        return $this->evaluate($this->exportable)
+            ?? true;
     }
 }

@@ -1,5 +1,5 @@
 <?php
 
-use Awcodes\TableRepeater\Tests\TestCase;
+use Juniyasyos\TableRepeater\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);

@@ -1,10 +1,10 @@
 <?php
 
-namespace Awcodes\TableRepeater\Tests\Fixtures;
+namespace Juniyasyos\TableRepeater\Tests\Fixtures;
 
-use Awcodes\TableRepeater\Components\TableRepeater;
-use Awcodes\TableRepeater\Header;
-use Awcodes\TableRepeater\Tests\Models\Page;
+use Juniyasyos\TableRepeater\Components\TableRepeater;
+use Juniyasyos\TableRepeater\Header;
+use Juniyasyos\TableRepeater\Tests\Models\Page;
 use Filament\Forms;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
