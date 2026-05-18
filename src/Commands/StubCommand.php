@@ -1,6 +1,6 @@
 <?php
 
-namespace Awcodes\TableRepeater\Commands;
+namespace Juniyasyos\TableRepeater\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
@@ -92,8 +92,8 @@ class StubCommand extends Command
 
 namespace {{ namespace }};
 
-use Awcodes\TableRepeater\Components\TableRepeater;
-use Awcodes\TableRepeater\Header;
+use Juniyasyos\TableRepeater\Components\TableRepeater;
+use Juniyasyos\TableRepeater\Header;
 use Filament\Forms\Components\TextInput;
 
 class {{ class }} extends TableRepeater

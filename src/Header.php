@@ -1,6 +1,6 @@
 <?php
 
-namespace Awcodes\TableRepeater;
+namespace Juniyasyos\TableRepeater;
 
 use Closure;
 use Filament\Support\Concerns\EvaluatesClosures;

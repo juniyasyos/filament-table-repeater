@@ -1,6 +1,6 @@
 <?php
 
-namespace Awcodes\TableRepeater\Validation\Rules;
+namespace Juniyasyos\TableRepeater\Validation\Rules;
 
 use Illuminate\Contracts\Validation\Rule;
 

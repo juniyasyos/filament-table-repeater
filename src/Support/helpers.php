@@ -1,8 +1,8 @@
 <?php
 
-use Awcodes\TableRepeater\Components\TableRepeater;
-use Awcodes\TableRepeater\Header;
-use Awcodes\TableRepeater\Support\Helpers;
+use Juniyasyos\TableRepeater\Components\TableRepeater;
+use Juniyasyos\TableRepeater\Header;
+use Juniyasyos\TableRepeater\Support\Helpers;
 
 if (!function_exists('table_repeater')) {
     /**

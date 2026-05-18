@@ -1,9 +1,9 @@
 <?php
 
-namespace Awcodes\TableRepeater\Builders;
+namespace Juniyasyos\TableRepeater\Builders;
 
-use Awcodes\TableRepeater\Components\TableRepeater;
-use Awcodes\TableRepeater\Header;
+use Juniyasyos\TableRepeater\Components\TableRepeater;
+use Juniyasyos\TableRepeater\Header;
 use Filament\Forms\Components\Component;
 
 class TableRepeaterBuilder

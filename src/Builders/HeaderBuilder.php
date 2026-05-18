@@ -1,8 +1,8 @@
 <?php
 
-namespace Awcodes\TableRepeater\Builders;
+namespace Juniyasyos\TableRepeater\Builders;
 
-use Awcodes\TableRepeater\Header;
+use Juniyasyos\TableRepeater\Header;
 use Filament\Support\Enums\Alignment;
 use Illuminate\Contracts\Support\Htmlable;
 

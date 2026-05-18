@@ -1,11 +1,11 @@
 <?php
 
-namespace Awcodes\TableRepeater;
+namespace Juniyasyos\TableRepeater;
 
-use Awcodes\TableRepeater\Commands\ConfigCommand;
-use Awcodes\TableRepeater\Commands\InstallCommand;
-use Awcodes\TableRepeater\Commands\StubCommand;
-use Awcodes\TableRepeater\Support\Macros;
+use Juniyasyos\TableRepeater\Commands\ConfigCommand;
+use Juniyasyos\TableRepeater\Commands\InstallCommand;
+use Juniyasyos\TableRepeater\Commands\StubCommand;
+use Juniyasyos\TableRepeater\Support\Macros;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -60,7 +60,7 @@ class TableRepeaterServiceProvider extends PackageServiceProvider
 
                 public function builder(string $name = 'items')
                 {
-                    return \Awcodes\TableRepeater\Builders\TableRepeaterBuilder::make($name);
+                    return \Juniyasyos\TableRepeater\Builders\TableRepeaterBuilder::make($name);
                 }
 
                 public function makeHeader(string $name)
@@ -70,22 +70,22 @@ class TableRepeaterServiceProvider extends PackageServiceProvider
 
                 public function headerBuilder(string $name)
                 {
-                    return \Awcodes\TableRepeater\Builders\HeaderBuilder::make($name);
+                    return \Juniyasyos\TableRepeater\Builders\HeaderBuilder::make($name);
                 }
 
                 public function config(string $key = null, mixed $default = null)
                 {
-                    return \Awcodes\TableRepeater\Support\Helpers::config($key, $default);
+                    return \Juniyasyos\TableRepeater\Support\Helpers::config($key, $default);
                 }
 
                 public function styling(string $key = null, string $default = null)
                 {
-                    return \Awcodes\TableRepeater\Support\Helpers::styling($key, $default);
+                    return \Juniyasyos\TableRepeater\Support\Helpers::styling($key, $default);
                 }
 
                 public function isFeatureEnabled(string $feature)
                 {
-                    return \Awcodes\TableRepeater\Support\Helpers::isFeatureEnabled($feature);
+                    return \Juniyasyos\TableRepeater\Support\Helpers::isFeatureEnabled($feature);
                 }
             };
         });

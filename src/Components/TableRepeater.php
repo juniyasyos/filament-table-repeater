@@ -1,6 +1,6 @@
 <?php
 
-namespace Awcodes\TableRepeater\Components;
+namespace Juniyasyos\TableRepeater\Components;
 
 use Closure;
 use Filament\Forms\Components\Placeholder;

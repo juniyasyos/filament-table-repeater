@@ -1,6 +1,6 @@
 <?php
 
-namespace Awcodes\TableRepeater\Components\Concerns;
+namespace Juniyasyos\TableRepeater\Components\Concerns;
 
 use Closure;
 use Filament\Support\Enums\MaxWidth;

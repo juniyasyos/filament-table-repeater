@@ -1,6 +1,6 @@
 <?php
 
-namespace Awcodes\TableRepeater\Validation;
+namespace Juniyasyos\TableRepeater\Validation;
 
 use Illuminate\Validation\Validator;
 

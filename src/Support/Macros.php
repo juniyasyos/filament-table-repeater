@@ -1,9 +1,9 @@
 <?php
 
-namespace Awcodes\TableRepeater\Support;
+namespace Juniyasyos\TableRepeater\Support;
 
-use Awcodes\TableRepeater\Components\TableRepeater;
-use Awcodes\TableRepeater\Header;
+use Juniyasyos\TableRepeater\Components\TableRepeater;
+use Juniyasyos\TableRepeater\Header;
 
 class Macros
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Awcodes\TableRepeater\Commands;
+namespace Juniyasyos\TableRepeater\Commands;
 
 use Illuminate\Console\Command;
 
