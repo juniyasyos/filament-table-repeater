@@ -1,10 +1,10 @@
-> [!Warning]
-> This package is deprecated. As of Filament v4 the native Repeater covers the use case of this package and it is not needed anymore.
+> [!NOTE]
+> This package is a custom table repeater plugin that has been aligned to Filament v4. Filament core also ships a native table repeater, so keep this package only if you need the custom behavior preserved here.
 
 # Table Repeater Plugin
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/awcodes/filament-table-repeater.svg?style=flat-square)](https://packagist.org/packages/awcodes/filament-table-repeater)
-[![Total Downloads](https://img.shields.io/packagist/dt/awcodes/filament-table-repeater.svg?style=flat-square)](https://packagist.org/packages/awcodes/filament-table-repeater)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/juniyasyos/table-repeater.svg?style=flat-square)](https://packagist.org/packages/juniyasyos/table-repeater)
+[![Total Downloads](https://img.shields.io/packagist/dt/juniyasyos/table-repeater.svg?style=flat-square)](https://packagist.org/packages/juniyasyos/table-repeater)
 
 <img src="https://res.cloudinary.com/aw-codes/image/upload/w_1200,f_auto,q_auto/plugins/table-repeater/awcodes-table-repeater.jpg" alt="table repeater opengraph image" width="1200" height="auto" class="filament-hidden" style="width: 100%;" />
 
@@ -13,11 +13,11 @@
 > [!NOTE]
 > In Filament v4, Table Repeaters are built into Core. For more information, see the [Filament documentation](https://filamentphp.com/docs/4.x/forms/repeater#table-repeaters).
 
-## Upgrade Guide for 2.x to 3.x
+## Upgrade Guide for v3 to v4
 
-1. Rename you use statements from `Juniyasyos\FilamentTableRepeater` to `Juniyasyos\TableRepeater`.
-2. Run `npm run build` to update your theme file.
-3. See [Headers](#headers) for changes to the `headers()` method.
+1. Keep using the `Juniyasyos\TableRepeater` namespace.
+2. Update your project to Filament v4 and recompile your theme assets.
+3. Review [Headers](#headers) and the Filament v4 table repeater docs for any API differences in your project.
 
 <!-- [docs_start] -->
 
@@ -26,31 +26,31 @@
 You can install the package via composer:
 
 ```bash
-composer require awcodes/filament-table-repeater
+composer require juniyasyos/table-repeater
 ```
 
 In an effort to align with Filament's theming methodology you will need to use a custom theme to use this plugin.
 
 > [!IMPORTANT]
-> If you have not set up a custom theme and are using a Panel follow the instructions in the [Filament Docs](https://filamentphp.com/docs/3.x/panels/themes#creating-a-custom-theme) first. The following applies to both the Panels Package and the standalone Forms package.
+> If you have not set up a custom theme and are using a Panel follow the instructions in the [Filament Docs](https://filamentphp.com/docs/4.x/panels/themes#creating-a-custom-theme) first. The following applies to both the Panels Package and the standalone Forms package.
 
 1. Import the plugin's stylesheet in your theme's css file.
 
 ```css
-@import '<path-to-vendor>/awcodes/filament-table-repeater/resources/css/plugin.css';
+@import '<path-to-vendor>/juniyasyos/table-repeater/resources/css/plugin.css';
 ```
 
 2. Add the plugin's views to your `tailwind.config.js` file.
 
 ```js
 content: [
-    '<path-to-vendor>/awcodes/filament-table-repeater/resources/**/*.blade.php',
+    '<path-to-vendor>/juniyasyos/table-repeater/resources/**/*.blade.php',
 ]
 ```
 
 ## Usage
 
-This field has most of the same functionality of the [Filament Forms Repeater](https://filamentphp.com/docs/3.x/forms/fields/repeater) field. The main exception is that this field can not be collapsed.
+This field has most of the same functionality of the [Filament Forms Repeater](https://filamentphp.com/docs/4.x/forms/repeater) field. The main exception is that this field can not be collapsed.
 
 ```php
 use Juniyasyos\TableRepeater\Components\TableRepeater;
