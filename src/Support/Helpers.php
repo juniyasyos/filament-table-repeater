@@ -26,7 +26,7 @@ class Helpers
     /**
      * Get Table Repeater configuration
      */
-    public static function config(string $key = null, mixed $default = null): mixed
+    public static function config(?string $key = null, mixed $default = null): mixed
     {
         if ($key === null) {
             return config('table-repeater', []);
@@ -38,7 +38,7 @@ class Helpers
     /**
      * Get styling configuration
      */
-    public static function styling(string $key = null, string $default = null): string
+    public static function styling(?string $key = null, ?string $default = null): string
     {
         $styling = config('table-repeater.styling', []);
 

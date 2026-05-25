@@ -52,7 +52,7 @@ if (!function_exists('table_repeater_styling')) {
      * @param  string|null  $default
      * @return string
      */
-    function table_repeater_styling(string $key, string $default = null): string
+    function table_repeater_styling(string $key, ?string $default = null): string
     {
         return Helpers::styling($key, $default);
     }

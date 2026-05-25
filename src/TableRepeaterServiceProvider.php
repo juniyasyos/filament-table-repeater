@@ -73,12 +73,12 @@ class TableRepeaterServiceProvider extends PackageServiceProvider
                     return \Juniyasyos\TableRepeater\Builders\HeaderBuilder::make($name);
                 }
 
-                public function config(string $key = null, mixed $default = null)
+                public function config(?string $key = null, mixed $default = null)
                 {
                     return \Juniyasyos\TableRepeater\Support\Helpers::config($key, $default);
                 }
 
-                public function styling(string $key = null, string $default = null)
+                public function styling(?string $key = null, ?string $default = null)
                 {
                     return \Juniyasyos\TableRepeater\Support\Helpers::styling($key, $default);
                 }
