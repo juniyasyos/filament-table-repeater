@@ -1,45 +1,71 @@
-/* ============================================================================
-   TABLE REPEATER STYLING
-   ============================================================================ */
+.table-repeater-component {
+    @apply overflow-hidden rounded-lg;
+}
+
+.table-repeater-component table {
+    @apply w-full rounded-lg border border-slate-200 bg-white shadow-sm dark:border-slate-600 dark:bg-slate-800 border-separate border-spacing-0;
+}
+
+.table-repeater-component thead {
+    @apply bg-slate-100 dark:bg-slate-800;
+}
+
+.table-repeater-component thead th {
+    @apply border-b border-slate-200 px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-900 dark:bg-slate-700 dark:border-slate-800 dark:text-slate-400;
+}
+
+.table-repeater-component tbody tr {
+    @apply transition-colors hover:bg-slate-50/80 dark:hover:bg-slate-900/70;
+}
+
+.table-repeater-component tbody td {
+    @apply border-b border-slate-100 px-4 py-3 align-top dark:border-slate-800/80;
+}
+
+.table-repeater-component tbody tr:last-child td {
+    @apply border-b-0;
+}
 
 .table-repeater-component .choices input {
     min-width: 100% !important;
 }
 
-/* Hide labels but keep them accessible for screen readers */
-.table-repeater-column.has-hidden-label .fi-fo-field-wrp > label {
-    @apply sr-only text-sm !mb-2 block;
+/* Hidden label, tetap accessible */
+.table-repeater-column.has-hidden-label .fi-fo-field-wrp>label {
+    @apply sr-only mb-2 block text-sm;
 }
 
-.table-repeater-column.has-hidden-label .fi-fo-field-wrp:has(.fi-checkbox-input) > label.fi-fo-checkbox-list-option-label {
+.table-repeater-column.has-hidden-label .fi-fo-field-wrp:has(.fi-checkbox-input)>label.fi-fo-checkbox-list-option-label {
     @apply not-sr-only;
 }
 
-/* ============================================================================
-   SHARED BREAKPOINT STYLES
-   ============================================================================ */
+/* Input agar lebih clean */
+.table-repeater-component .fi-input-wrp,
+.table-repeater-component .fi-select-input,
+.table-repeater-component .fi-textarea {
+    @apply rounded-xl border-slate-200 bg-white text-slate-800 shadow-sm transition focus-within:ring-2 focus-within:ring-primary-500/20 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100;
+}
 
-/* Desktop breakpoint styles - applies to all desktop breakpoints */
+/* Streamlined mode */
 @media (min-width: calc(theme('screens.sm') + 1px)) {
-    /* Streamlined mode: remove visual noise from inputs */
+
     .table-repeater-component.streamlined .fi-input-wrp,
     .table-repeater-component.streamlined .fi-fo-file-upload .filepond--root {
-        @apply ring-0 bg-transparent shadow-none;
+        @apply bg-transparent shadow-none ring-0 dark:bg-transparent;
     }
 
     .table-repeater-component.streamlined .fi-fo-field-wrp:has(.fi-fo-checkbox-list),
     .table-repeater-component.streamlined .fi-fo-field-wrp:has(.fi-checkbox-input),
     .table-repeater-component.streamlined .fi-fo-field-wrp:has(.fi-fo-radio) {
-        @apply py-2 px-3;
+        @apply rounded-xl px-3 py-2;
     }
 
     .table-repeater-component.streamlined .fi-fo-field-wrp:has(.fi-fo-toggle) {
-        @apply inline-block mt-1;
+        @apply mt-1 inline-block;
     }
 
-    /* Row dividers and actions */
     .table-repeater-component .table-repeater-row {
-        @apply divide-x rtl:divide-x-reverse divide-gray-950/5 dark:divide-white/20;
+        @apply divide-x divide-slate-100 rtl:divide-x-reverse dark:divide-slate-800;
     }
 
     .table-repeater-component .table-repeater-row-actions {
@@ -47,78 +73,37 @@
     }
 }
 
-/* ============================================================================
-   MOBILE & RESPONSIVE STYLES
-   ============================================================================ */
-
-/* Stack table into cards on smaller screens */
+/* Responsive card style */
 @media (max-width: theme('screens.sm')) {
-    .table-repeater-component.break-point-sm table {
+
+    .table-repeater-component.break-point-sm table,
+    .table-repeater-component.break-point-sm tbody,
+    .table-repeater-component.break-point-sm th,
+    .table-repeater-component.break-point-sm td {
         @apply block w-full;
-        thead { @apply sr-only; }
-        :is(tbody, th, td) { @apply block !w-full; }
-        label { @apply text-start; }
-        tr { @apply p-4 !w-full flex flex-col gap-6; }
-        tr td:last-of-type ul { @apply px-0; }
-        .table-repeater-column.has-hidden-label .fi-fo-field-wrp > label {
-            @apply not-sr-only;
-        }
+    }
+
+    .table-repeater-component.break-point-sm thead {
+        @apply sr-only;
+    }
+
+    .table-repeater-component.break-point-sm tr {
+        @apply mb-3 flex w-full flex-col gap-4 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-800 dark:bg-slate-900;
+    }
+
+    .table-repeater-component.break-point-sm td {
+        @apply border-0 px-0 py-0;
+    }
+
+    .table-repeater-component.break-point-sm label {
+        @apply text-start text-slate-700 dark:text-slate-300;
+    }
+
+    .table-repeater-component.break-point-sm tr td:last-of-type ul {
+        @apply px-0;
+    }
+
+    .table-repeater-component.break-point-sm .table-repeater-column.has-hidden-label .fi-fo-field-wrp>label {
+        @apply not-sr-only;
     }
 }
-
-@media (max-width: theme('screens.md')) {
-    .table-repeater-component.break-point-md table {
-        @apply block w-full;
-        thead { @apply sr-only; }
-        :is(tbody, th, td) { @apply block !w-full; }
-        label { @apply text-start; }
-        tr { @apply p-4 !w-full flex flex-col gap-6; }
-        tr td:last-of-type ul { @apply px-0; }
-        .table-repeater-column.has-hidden-label .fi-fo-field-wrp > label {
-            @apply not-sr-only;
-        }
-    }
-}
-
-@media (max-width: theme('screens.lg')) {
-    .table-repeater-component.break-point-lg table {
-        @apply block w-full;
-        thead { @apply sr-only; }
-        :is(tbody, th, td) { @apply block !w-full; }
-        label { @apply text-start; }
-        tr { @apply p-4 !w-full flex flex-col gap-6; }
-        tr td:last-of-type ul { @apply px-0; }
-        .table-repeater-column.has-hidden-label .fi-fo-field-wrp > label {
-            @apply not-sr-only;
-        }
-    }
-}
-
-@media (max-width: theme('screens.xl')) {
-    .table-repeater-component.break-point-xl table {
-        @apply block w-full;
-        thead { @apply sr-only; }
-        :is(tbody, th, td) { @apply block !w-full; }
-        label { @apply text-start; }
-        tr { @apply p-4 !w-full flex flex-col gap-6; }
-        tr td:last-of-type ul { @apply px-0; }
-        .table-repeater-column.has-hidden-label .fi-fo-field-wrp > label {
-            @apply not-sr-only;
-        }
-    }
-}
-
-@media (max-width: theme('screens.2xl')) {
-    .table-repeater-component.break-point-2xl table {
-        @apply block w-full;
-        thead { @apply sr-only; }
-        :is(tbody, th, td) { @apply block !w-full; }
-        label { @apply text-start; }
-        tr { @apply p-4 !w-full flex flex-col gap-6; }
-        tr td:last-of-type ul { @apply px-0; }
-        .table-repeater-column.has-hidden-label .fi-fo-field-wrp > label {
-            @apply not-sr-only;
-        }
-    }
-}
-

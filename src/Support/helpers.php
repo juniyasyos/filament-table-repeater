@@ -38,7 +38,7 @@ if (!function_exists('table_repeater_config')) {
      * @param  mixed  $default
      * @return mixed
      */
-    function table_repeater_config(string $key = null, mixed $default = null): mixed
+    function table_repeater_config(string|null $key = null, mixed $default = null): mixed
     {
         return Helpers::config($key, $default);
     }

@@ -7,10 +7,12 @@ use Filament\Support\Concerns\EvaluatesClosures;
 use Filament\Support\Enums\Alignment;
 use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Support\Str;
+use Illuminate\Support\Traits\Macroable;
 
 class Header
 {
     use EvaluatesClosures;
+    use Macroable;
 
     final public function __construct(
         public string $name,
